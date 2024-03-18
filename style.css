@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table, tr {
+    border: 1px solid #222;
+}
+
+#Tela1 {
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "esq cima cima cima"
+        "esq baixo baixo baixo"
+    ;
+
+    grid-template-rows: 80px 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    background-color: #e4e4e4;
+}
+
+#Tela1 header {
+    grid-area: header;
+    background-color: #FFF;
+}
+
+#Tela1 #esq {
+    grid-area: esq;
+    background-color: #FFF;
+}
+
+#Tela1 #cima {
+    grid-area: cima;
+    background-color: #FFF;
+}
+
+#Tela1 #baixo {
+    grid-area: baixo;
+    background-color: #FFF;
+}
+
+#tela2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+
+}
+
+
+#tela2 > div {
+    background-color: rgb(108, 159, 206);
+    grid-row: 1;
+}
+#tela2 > div:nth-child(1) {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tela2 > div:nth-child(1) img{
+    width: 100px;
+}
